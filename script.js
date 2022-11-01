@@ -42,6 +42,34 @@ class UI {
     }
 }
 
+  //display Books
+  document.addEventListener('DOMContentLoaded',UI.displayBooks);
+
+  //Event:Add a Book
+  document.querySelector('#formContainer').addEventListener('submit',(e)=> 
+  {
+      e.preventDefault();
+      const title =document.querySelector('#title').value;
+      const author =document.querySelector('#author').value;
+      //instantiate
+
+      const book =new Book(title,author);
+      console.log(book);
+      //Add book to list
+      UI.addBookToList(book);
+      UI.clearField();
+      // document.querySelector('#title').value="";
+      // document.querySelector('#author').value="";
+  })
+
+  //Event :Remove a Book
+  document.querySelector('.bookLists').addEventListener('click',(e)=> 
+  {
+   UI.deleteBook(e.target);
+  // console.log(e.target);
+
+  });
+
 
 
 
