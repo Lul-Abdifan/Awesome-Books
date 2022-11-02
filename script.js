@@ -14,10 +14,17 @@ class UI {
         const list =document.querySelector('.bookLists');
         const row =document.createElement('tr');
         row.innerHTML =
-        `<td>${book.title}</td>
-        <td>${book.author}</td>
-        <td><a href="" class="delete">Remove</a></td>
+        `<td id="authorTitle"> <div class="raw-lists-header"> <h3>"${book.title}" by </h3>
+        <h3>${book.author}</h3></td> </div>
+      
         `;
+        const createButton = document.createElement('td');
+    const removeBtn = document.createElement('button');
+    removeBtn.classList.add('remove-button');
+    removeBtn.type = 'submit';
+    removeBtn.innerText = 'Remove';
+    createButton.appendChild(removeBtn);
+    row.appendChild(createButton);
         list.appendChild(row);
 
     }
@@ -25,11 +32,13 @@ class UI {
            document.querySelector('#title').value="";
         document.querySelector('#author').value="";
     }
-    static deleteBook(e){
-        if(e.classllist.contains('delete')){
-            e.parentElement.parentElement.remove();
+
+    static deleteBook(el) {
+        if (el.classList.contains('remove-button')) {
+          el.parentElement.parentElement.remove();
         }
-    }
+      }
+  
    
 }
 
@@ -85,6 +94,8 @@ class Store {
       Store.addBook(book);
       UI.clearField();
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+
+    
       // document.querySelector('#title').value="";
       // document.querySelector('#author').value="";
   })
@@ -93,54 +104,11 @@ class Store {
   document.querySelector('.bookLists').addEventListener('click',(e)=> 
   {
    UI.deleteBook(e.target);
-  // console.log(e.target);
+  
 
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class ui{
-
-//     addBook(book){
-//         const lists =document.querySelector('.bookLists');
-//         const list  = document.createElement('tr');
-//         list.innerHTML=
-//         `<td>${book.title}</td>
-//          <td>${book.author}</td>
-//          <td><a href="" class="remove">Remove</a></td>
-//         `;
-//         lists.appendChild(list);
-//     }
-//     clearFields(){
-//         document.getElementById('title').value="";
-//         document.getElementById('author').value="";
-//     };
-// }
-//     document.getElementById('form').addEventListener('submit',function(e){
-       
-//        const titleholder =  document.getElementById('title').value;
-//        const authorholder = document.getElementById('author').value;
-//        const book =new Book(titleholder,authorholder);
-//        const ui = new userInterface();
-//        ui.addBook(book);
-//        ui.clearFields();
-
-
-//     })
 
 
 

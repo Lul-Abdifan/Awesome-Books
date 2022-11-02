@@ -13,6 +13,12 @@
 .dataContainer h1 {
     text-align: center;
 }
+h3{
+    display: inline;
+}
+.raw-lists-header{
+    display: inline;
+}
 
 table {
     font-family: arial, sans-serif;
@@ -28,17 +34,29 @@ table {
 
     margin-left:800px;
     border:5px  solid black;
+    color:black;
+    list-style-type: none
+    ;
+    box-shadow: 1px 0 2px;
   }
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    width: 40%;
   }
   
   tr:nth-child(odd) {
     background-color: #dddddd;
   }
 
+  #authorTitle{
+    width:300px;
+  }
+.remove-button{
+margin-left:300px;
+padding:10px;
+}
 
 
 
