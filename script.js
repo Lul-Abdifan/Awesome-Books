@@ -7,17 +7,7 @@ class Book{
 }
 class UI {
     static displayBooks(){
-        const StoredBooks =[
-            {
-                title:'book 1',
-                author:"hope"
-            },
-            {
-                title:'book 1',
-                author:"hope"
-            }
-        ];
-        const books = StoredBooks;
+        const books = Store.getBooks();
         books.forEach((book)=>UI.addBookToList(book));
     }
     static addBookToList(book) {
@@ -35,65 +25,54 @@ class UI {
            document.querySelector('#title').value="";
         document.querySelector('#author').value="";
     }
-    static deleteBook(a){
-        if(a.classllist.contains('delete')){
-            a.parentElement.parentElement.remove();
+    static deleteBook(e){
+        if(e.classllist.contains('delete')){
+            e.parentElement.parentElement.remove();
         }
     }
+   
 }
 
 //for storing 
-class StoredBooks{
+class Store {
     static getBooks()
     {
-
+        let books;
+        if(localStorage.getItem("books")===null)
+        {
+            books=[];
+        }
+        else{
+            books =JSON.parse(localStorage.getItem("books"));
+        }
+        return books;
     }
     static addBook(book)
     {
+        const books=Store.getBooks();
+        books.push(book);
+        localStorage.setItem('books',JSON.stringify(books));
 
     }
     static removeBook(author)
     {
+        const books=Store.getBooks();
+        books.forEach((book,index)=>{
+            if(book.author == author)
+            {
+              books.splice(index,1);
+            }
+        })
+        localStorage.setItem('books',JSON.stringify(books));
         
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   //display Books
   document.addEventListener('DOMContentLoaded',UI.displayBooks);
 
   //Event:Add a Book
-  document.querySelector('#formContainer').addEventListener('submit',(e)=> 
+  document.querySelector('#add-new-book').addEventListener('submit',(e)=> 
   {
       e.preventDefault();
       const title =document.querySelector('#title').value;
@@ -101,10 +80,11 @@ class StoredBooks{
       //instantiate
 
       const book =new Book(title,author);
-      console.log(book);
       //Add book to list
       UI.addBookToList(book);
+      Store.addBook(book);
       UI.clearField();
+    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
       // document.querySelector('#title').value="";
       // document.querySelector('#author').value="";
   })
@@ -116,35 +96,6 @@ class StoredBooks{
   // console.log(e.target);
 
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
 
 
 

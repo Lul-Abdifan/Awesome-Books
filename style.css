@@ -3,6 +3,77 @@
     margin:0;
     box-sizing: border-box;
 }
-.dataContainer{
-    text-align: center;
+
+
+
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 5px solid black;
+    padding-right:300px;
+    margin:5% 10%;
+    
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #dddddd;
+  }
+
+
+
+
+
+
+
+/* //form style */
+.formCon{
+    margin: top 25%;;
 }
+.underline {
+    border: 3px solid black;
+    border-radius: 15px;
+    width: 300px;
+    margin: 0 auto 40px;
+  }
+.form h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    margin:30px auto;
+  }
+  
+  #add-new-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 400px;
+    margin: auto;
+  }
+  
+  .book-title,
+  .book-author {
+    border: 3px solid black;
+    width: 400px;
+    font-weight: 500;
+    height: 30px;
+  }
+  
+  #add-btn {
+    padding: 7px 15px;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 5px 5px 0 2px;
+    align-self: flex-end;
+  }
