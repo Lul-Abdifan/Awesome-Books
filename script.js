@@ -42,6 +42,53 @@ class UI {
     }
 }
 
+//for storing 
+class StoredBooks{
+    static getBooks()
+    {
+
+    }
+    static addBook(book)
+    {
+
+    }
+    static removeBook(author)
+    {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //display Books
   document.addEventListener('DOMContentLoaded',UI.displayBooks);
 
