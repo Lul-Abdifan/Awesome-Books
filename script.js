@@ -1,3 +1,4 @@
+let books = [];
 class Book{
     constructor(title,author)
     {
@@ -8,9 +9,9 @@ class Book{
 class UI {
     static displayBooks(){
         const books = Store.getBooks();
-        books.forEach((book)=>UI.addBookToList(book));
+        books.forEach((book, index)=>UI.addBookToList(book,index));
     }
-    static addBookToList(book) {
+    static addBookToList(book, index) {
         const list =document.querySelector('.bookLists');
         const row =document.createElement('tr');
         row.innerHTML =
@@ -20,9 +21,10 @@ class UI {
         `;
         const createButton = document.createElement('td');
     const removeBtn = document.createElement('button');
-    removeBtn.classList.add('remove-button');
+    removeBtn.className='remove-button';
     removeBtn.type = 'submit';
     removeBtn.innerText = 'Remove';
+    removeBtn.id=index
     createButton.appendChild(removeBtn);
     row.appendChild(createButton);
         list.appendChild(row);
@@ -34,8 +36,10 @@ class UI {
     }
 
     static deleteBook(el) {
-        if (el.classList.contains('remove-button')) {
+        if (el.className==='remove-button') {
           el.parentElement.parentElement.remove();
+          books.splice(el.id,1)
+          localStorage.setItem('books',JSON.stringify(books));
         }
       }
   
@@ -46,7 +50,6 @@ class UI {
 class Store {
     static getBooks()
     {
-        let books;
         if(localStorage.getItem("books")===null)
         {
             books=[];
@@ -71,8 +74,9 @@ class Store {
             {
               books.splice(index,1);
             }
+            localStorage.setItem('books',JSON.stringify(books));
+
         })
-        localStorage.setItem('books',JSON.stringify(books));
         
     }
 }
