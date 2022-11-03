@@ -1,4 +1,4 @@
-let books = [];
+
 class Book{
     constructor(title,author)
     {
@@ -19,7 +19,7 @@ class UI {
         <h3>${book.author}</h3></td> </div>
       
         `;
-        const createButton = document.createElement('td');
+  const createButton = document.createElement('td');
     const removeBtn = document.createElement('button');
     removeBtn.className='remove-button';
     removeBtn.type = 'submit';
@@ -50,6 +50,7 @@ class UI {
 class Store {
     static getBooks()
     {
+        let books = [];
         if(localStorage.getItem("books")===null)
         {
             books=[];
@@ -108,8 +109,6 @@ class Store {
   document.querySelector('.bookLists').addEventListener('click',(e)=> 
   {
    UI.deleteBook(e.target);
-  
-
   });
 
 
