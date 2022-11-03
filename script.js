@@ -110,43 +110,58 @@ document.querySelector('.bookLists').addEventListener('click',(e)=>
 
 //           //navigation for the all lists
        
-
-
-
-  document.querySelector('#list').addEventListener('click',(e)=> 
+const storerSpace =document.querySelector('#bookStorer');
+const addSpace =document.querySelector('#filling-form-section');
+const contactSpace =document.querySelector('#contactpage');
+const links =document.querySelectorAll('.nav-link');
+class Navigation{
+    
+  
+static changePage(identifier)
 {
-   
-    const storerSpace =document.querySelector('#bookStorer');
-    const addSpace =document.querySelector('#filling-form-section');
-    const contactSpace =document.querySelector('#contactpage');
-    addSpace.style.display = 'none';
+
+   if (identifier === 'List') 
+    {
+       
+
     contactSpace.style.display = 'none';
-    storerSpace.style.display = 'block';
-
-
-});
-document.querySelector('#add-new').addEventListener('click',(e)=> 
-{
-   
-    const storerSpace =document.querySelector('#bookStorer');
-    const addSpace =document.querySelector('#filling-form-section');
-    const contactSpace =document.querySelector('#contactpage');
     addSpace.style.display = 'none';
+    storerSpace.style.display = 'block';
+}
+else if (identifier === 'Add new')
+{
     contactSpace.style.display = 'none';
     addSpace.style.display = 'block';
     storerSpace.style.display = 'none';
-
-
-});
-document.querySelector('#contact-page').addEventListener('click',(e)=> 
-{
-   
-    const storerSpace =document.querySelector('#bookStorer');
-    const addSpace =document.querySelector('#filling-form-section');
-    const contactSpace =document.querySelector('#contactpage');
+}
+else{
     contactSpace.style.display = 'block';
     addSpace.style.display = 'none';
     storerSpace.style.display = 'none';
 
+}
+}}
 
-});
+
+
+
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+       
+        Navigation.changePage(link.textContent);
+    });
+  });
+
+//   for(let i=0;i<links.length;i+=1){
+//     links.onclick=(e)=>{
+        
+//         Navigation.changePage(links.textContent);
+//     }
+//   }
+
+
+
+
+
+
+

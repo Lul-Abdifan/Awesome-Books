@@ -126,3 +126,17 @@ padding:10px;
     list-style-type: none;
     cursor: pointer;
   }
+  #contactpage{
+    text-align: center;
+    padding-top: 5%;
+  }
+  #contactpage h2{
+    font-weight: 700;
+    color:red;
+    margin-bottom:20px;
+  }
+.lists{
+    color:red;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
