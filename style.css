@@ -1,108 +1,102 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.dataContainer{
-    margin-left:100px;
-    margin-right: 200px;
 
-
-
+.dataContainer {
+  margin-left: 100px;
+  margin-right: 200px;
 }
+
 .dataContainer h1 {
-    text-align: center;
+  text-align: center;
 }
-h3{
-    display: inline;
+
+h3 {
+  display: inline;
 }
-.raw-lists-header{
-    display: inline;
+
+.raw-lists-header {
+  display: inline;
 }
 
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 5px solid black;
-    padding-right:300px;
-    margin-bottom: 50px;
-    
-  }
-  .delete{
-    background-color: #ffffff;
-
-    margin-left:800px;
-    border:5px  solid black;
-    color:black;
-    list-style-type: none
-    ;
-    box-shadow: 1px 0 2px;
-  }
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    width: 40%;
-  }
-  
-  tr:nth-child(odd) {
-    background-color: #dddddd;
-  }
-
-  #authorTitle{
-    width:300px;
-  }
-.remove-button{
-margin-left:300px;
-padding:10px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 5px solid black;
+  padding-right: 300px;
+  margin-bottom: 50px;
 }
 
-
-
-
-
-
-/* //form style */
-.formCon{
-    margin: top 25%;;
+.delete {
+  background-color: #fff;
+  margin-left: 800px;
+  border: 5px  solid black;
+  color: black;
+  list-style-type: none;
+  box-shadow: 1px 0 2px;
 }
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+  width: 40%;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+#authorTitle {
+  width: 300px;
+}
+
+.remove-button {
+  margin-left: 300px;
+  padding: 10px;
+}
+
 .underline {
-    border: 3px solid black;
-    border-radius: 15px;
-    width: 300px;
-    margin: 0 auto 40px;
-  }
+  border: 3px solid black;
+  border-radius: 15px;
+  width: 300px;
+  margin: 0 auto 40px;
+}
+
 .form h2 {
-    text-align: center;
-    font-size: 42px;
-    font-weight: 500;
-    margin:30px auto;
-  }
-  
-  #add-new-book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 400px;
-    margin: auto;
-  }
-  
-  .book-title,
-  .book-author {
-    border: 3px solid black;
-    width: 400px;
-    font-weight: 500;
-    height: 30px;
-  }
-  
-  #add-btn {
-    padding: 7px 15px;
-    background-color: white;
-    border: 2px solid black;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 5px 5px 0 2px;
-    align-self: flex-end;
-  }
+  text-align: center;
+  font-size: 42px;
+  font-weight: 500;
+  margin: 30px auto;
+}
+
+#add-new-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 400px;
+  margin: auto;
+}
+
+.book-title,
+.book-author {
+  border: 3px solid black;
+  width: 400px;
+  font-weight: 500;
+  height: 30px;
+}
+
+#add-btn {
+  padding: 7px 15px;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 5px 5px 0 2px;
+  align-self: flex-end;
+}
