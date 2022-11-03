@@ -1,17 +1,19 @@
-let books = [];
-class Book{
+let books =[];
+class Collection{
     constructor(title,author)
     {
         this.title=title;
         this.author=author;
     } 
 }
-class UI {
-    static displayBooks(){
+class Page {
+    
+    static displayOnPage(){
+        
         const books = Store.getBooks();
-        books.forEach((book, index)=>UI.addBookToList(book,index));
+        books.forEach((book, index)=>Page.addBookToPage(book,index));
     }
-    static addBookToList(book, index) {
+    static addBookToPage(book, index) {
         const list =document.querySelector('.bookLists');
         const row =document.createElement('tr');
         row.innerHTML =
@@ -45,8 +47,9 @@ class UI {
 class Store {
     static getBooks()
     {
+        const storage =localStorage.getItem("books");
     
-        if(localStorage.getItem("books")===null)
+        if(storage===null)
         {
             books=[];
         }
@@ -78,7 +81,7 @@ class Store {
 }
 
   //display Books
-  document.addEventListener('DOMContentLoaded',UI.displayBooks);
+  document.addEventListener('DOMContentLoaded',Page.displayOnPage);
 
   //Event:Add a Book
   document.querySelector('#add-new-book').addEventListener('submit',(e)=> 
@@ -88,22 +91,22 @@ class Store {
       const author =document.querySelector('#author').value;
       //instantiate
 
-      const book =new Book(title,author);
+      const book =new Collection(title,author);
       //Add book to list
-      UI.addBookToList(book);
+      UI.addBookToPage(book);
       Store.addBook(book);
       document.querySelector('#title').value="";
       document.querySelector('#author').value="";
-    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+      Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 
     
-   
+
   })
 
   //Event :Remove a Book
   document.querySelector('.bookLists').addEventListener('click',(e)=> 
   {
-   UI.deleteBook(e.target);
+   Page.deleteBook(e.target);
   });
 
 

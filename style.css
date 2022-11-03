@@ -121,6 +121,7 @@ border:1px solid red;
     justify-content:space-around;
     align-items: center;
     padding: 15px 0px;
+    border:5px solid rgb(165, 59, 59);
   }
   .logo a{
     font-size: 30px;
