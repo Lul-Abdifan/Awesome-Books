@@ -12,6 +12,11 @@
 }
 .dataContainer h1 {
     text-align: center;
+    margin:50px auto;
+    color:red;
+}
+.dataContainer h1 span{
+  color:rgb(153, 45, 26)
 }
 h3{
     display: inline;
@@ -54,8 +59,14 @@ table {
     width:300px;
   }
 .remove-button{
+
 margin-left:300px;
 padding:10px;
+}
+.remove-button:hover{
+color: red;
+font-weight: 900;
+border:1px solid red;
 }
 
 
@@ -71,7 +82,8 @@ padding:10px;
     text-align: center;
     font-size: 42px;
     font-weight: 500;
-    margin:30px auto;
+    margin-top:70px;
+    margin-bottom:100px;
   }
   
   #add-new-book {
@@ -125,6 +137,9 @@ padding:10px;
     margin-right: 20px;
     list-style-type: none;
     cursor: pointer;
+  }
+  header ul li:hover{
+    color:blue;
   }
   #contactpage{
     text-align: center;
