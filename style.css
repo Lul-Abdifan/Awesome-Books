@@ -67,12 +67,6 @@ padding:10px;
 .formCon{
     margin: top 25%;;
 }
-.underline {
-    border: 3px solid black;
-    border-radius: 15px;
-    width: 300px;
-    margin: 0 auto 40px;
-  }
 .form h2 {
     text-align: center;
     font-size: 42px;
@@ -105,4 +99,30 @@ padding:10px;
     font-weight: 500;
     box-shadow: 5px 5px 0 2px;
     align-self: flex-end;
+  }
+
+  /* style for navigation,lists */
+
+  header{
+    background-color: orange;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 15px 0px;
+  }
+  .logo a{
+    font-size: 30px;
+    text-decoration: none;
+    color:red;
+  }
+  header ul{
+    display:flex;
+    background-color: rgb(238, 163, 23);
+
+    
+  }
+  header ul li{
+    margin-right: 20px;
+    list-style-type: none;
+    cursor: pointer;
   }
