@@ -30,12 +30,7 @@ class UI {
         list.appendChild(row);
 
     }
-    static clearField(){
-           document.querySelector('#title').value="";
-        document.querySelector('#author').value="";
-    }
-
-    static deleteBook(el) {
+ static deleteBook(el) {
         if (el.className==='remove-button') {
           el.parentElement.parentElement.remove();
           books.splice(el.id,1)
@@ -97,12 +92,12 @@ class Store {
       //Add book to list
       UI.addBookToList(book);
       Store.addBook(book);
-      UI.clearField();
+      document.querySelector('#title').value="";
+      document.querySelector('#author').value="";
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 
     
-      // document.querySelector('#title').value="";
-      // document.querySelector('#author').value="";
+   
   })
 
   //Event :Remove a Book
