@@ -119,7 +119,7 @@ class Navigation{
   
 static changePage(identifier)
 {
-
+  
    if (identifier === 'List') 
     {
        
