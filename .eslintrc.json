@@ -11,6 +11,7 @@
     },
     "extends": ["airbnb-base"],
     "rules": {
+      "max-classes-per-file": "off",
       "no-shadow": "off",
       "no-param-reassign": "off",
       "eol-last": "off",
@@ -23,4 +24,3 @@
       "build/"
     ]
   }
-  
