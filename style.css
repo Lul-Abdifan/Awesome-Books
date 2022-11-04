@@ -11,6 +11,12 @@
 
 .dataContainer h1 {
   text-align: center;
+  margin: 50px auto;
+  color: red;
+}
+
+.dataContainer h1 span {
+  color: rgb(153, 45, 26);
 }
 
 h3 {
@@ -60,18 +66,18 @@ tr:nth-child(odd) {
   padding: 10px;
 }
 
-.underline {
-  border: 3px solid black;
-  border-radius: 15px;
-  width: 300px;
-  margin: 0 auto 40px;
+.remove-button:hover {
+  color: red;
+  font-weight: 900;
+  border: 1px solid red;
 }
 
 .form h2 {
   text-align: center;
   font-size: 42px;
   font-weight: 500;
-  margin: 30px auto;
+  margin-top: 70px;
+  margin-bottom: 100px;
 }
 
 #add-new-book {
@@ -99,4 +105,53 @@ tr:nth-child(odd) {
   font-weight: 500;
   box-shadow: 5px 5px 0 2px;
   align-self: flex-end;
+}
+
+/* style for navigation,lists */
+
+header {
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  border: 5px solid rgb(165, 59, 59);
+}
+
+.logo a {
+  font-size: 30px;
+  text-decoration: none;
+  color: red;
+}
+
+header ul {
+  display: flex;
+  background-color: rgb(238, 163, 23);
+}
+
+header ul li {
+  margin-right: 20px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  color: blue;
+}
+
+#contactpage {
+  text-align: center;
+  padding-top: 5%;
+}
+
+#contactpage h2 {
+  font-weight: 700;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.lists {
+  color: red;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
