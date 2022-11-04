@@ -1,7 +1,7 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# FirstCapStone
+# Awsome Books SPA
 
 > In this project, we built a basic website that allows users to add/remove books from a list.we achieved that by using JavaScript objects and arrays. we also needed to dynamically modify the DOM and add basic events. We added navigation bar and also SPA (Single Page Application) in our project, as it was required.
 
