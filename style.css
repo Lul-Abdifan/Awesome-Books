@@ -1,158 +1,157 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.dataContainer{
-    margin-left:100px;
-    margin-right: 200px;
 
-
-
+.dataContainer {
+  margin-left: 100px;
+  margin-right: 200px;
 }
+
 .dataContainer h1 {
-    text-align: center;
-    margin:50px auto;
-    color:red;
+  text-align: center;
+  margin: 50px auto;
+  color: red;
 }
-.dataContainer h1 span{
-  color:rgb(153, 45, 26)
+
+.dataContainer h1 span {
+  color: rgb(153, 45, 26);
 }
-h3{
-    display: inline;
+
+h3 {
+  display: inline;
 }
-.raw-lists-header{
-    display: inline;
+
+.raw-lists-header {
+  display: inline;
 }
 
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 5px solid black;
-    padding-right:300px;
-    margin-bottom: 50px;
-    
-  }
-  .delete{
-    background-color: #ffffff;
-
-    margin-left:800px;
-    border:5px  solid black;
-    color:black;
-    list-style-type: none
-    ;
-    box-shadow: 1px 0 2px;
-  }
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    width: 40%;
-  }
-  
-  tr:nth-child(odd) {
-    background-color: #dddddd;
-  }
-
-  #authorTitle{
-    width:300px;
-  }
-.remove-button{
-
-margin-left:300px;
-padding:10px;
-}
-.remove-button:hover{
-color: red;
-font-weight: 900;
-border:1px solid red;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 5px solid black;
+  padding-right: 300px;
+  margin-bottom: 50px;
 }
 
-
-
-
-
-
-/* //form style */
-.formCon{
-    margin: top 25%;;
+.delete {
+  background-color: #fff;
+  margin-left: 800px;
+  border: 5px  solid black;
+  color: black;
+  list-style-type: none;
+  box-shadow: 1px 0 2px;
 }
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+  width: 40%;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+#authorTitle {
+  width: 300px;
+}
+
+.remove-button {
+  margin-left: 300px;
+  padding: 10px;
+}
+
+.remove-button:hover {
+  color: red;
+  font-weight: 900;
+  border: 1px solid red;
+}
+
 .form h2 {
-    text-align: center;
-    font-size: 42px;
-    font-weight: 500;
-    margin-top:70px;
-    margin-bottom:100px;
-  }
-  
-  #add-new-book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 400px;
-    margin: auto;
-  }
-  
-  .book-title,
-  .book-author {
-    border: 3px solid black;
-    width: 400px;
-    font-weight: 500;
-    height: 30px;
-  }
-  
-  #add-btn {
-    padding: 7px 15px;
-    background-color: white;
-    border: 2px solid black;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 5px 5px 0 2px;
-    align-self: flex-end;
-  }
+  text-align: center;
+  font-size: 42px;
+  font-weight: 500;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
 
-  /* style for navigation,lists */
+#add-new-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 400px;
+  margin: auto;
+}
 
-  header{
-    background-color: orange;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    padding: 15px 0px;
-    border:5px solid rgb(165, 59, 59);
-  }
-  .logo a{
-    font-size: 30px;
-    text-decoration: none;
-    color:red;
-  }
-  header ul{
-    display:flex;
-    background-color: rgb(238, 163, 23);
+.book-title,
+.book-author {
+  border: 3px solid black;
+  width: 400px;
+  font-weight: 500;
+  height: 30px;
+}
 
-    
-  }
-  header ul li{
-    margin-right: 20px;
-    list-style-type: none;
-    cursor: pointer;
-  }
-  header ul li:hover{
-    color:blue;
-  }
-  #contactpage{
-    text-align: center;
-    padding-top: 5%;
-  }
-  #contactpage h2{
-    font-weight: 700;
-    color:red;
-    margin-bottom:20px;
-  }
-.lists{
-    color:red;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
+#add-btn {
+  padding: 7px 15px;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 5px 5px 0 2px;
+  align-self: flex-end;
+}
+
+/* style for navigation,lists */
+
+header {
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  border: 5px solid rgb(165, 59, 59);
+}
+
+.logo a {
+  font-size: 30px;
+  text-decoration: none;
+  color: red;
+}
+
+header ul {
+  display: flex;
+  background-color: rgb(238, 163, 23);
+}
+
+header ul li {
+  margin-right: 20px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  color: blue;
+}
+
+#contactpage {
+  text-align: center;
+  padding-top: 5%;
+}
+
+#contactpage h2 {
+  font-weight: 700;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.lists {
+  color: red;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
