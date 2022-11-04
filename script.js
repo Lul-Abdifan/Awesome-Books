@@ -90,7 +90,6 @@ document.querySelector('.bookLists').addEventListener('click', (e) => {
   Page.removeFromPage(e.target);
 });
 
-
 //           //navigation for the all lists
 
 const storerSpace = document.querySelector('#bookStorer');
@@ -132,4 +131,3 @@ links.forEach((link) => {
     Navigation.changePage(link.textContent);
   };
 });
-
