@@ -15,6 +15,10 @@
 
 [Live Demo Link](https://livedemo.com)
 
+## Authors
+ - [Ahsan Ghazni Khan](https://github.com/Ahsan12356)
+ - [Abdi](https://github.com/Lul-Abdifan)
+
 
 ## Getting Started
 
